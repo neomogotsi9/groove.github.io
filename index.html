@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download My Book</title>
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email pattern for validation
+
+            if(pattern.test(email)){
+                // Assuming you have a book.pdf in the same directory as your HTML file
+                // Redirecting the user to the book's URL after validating the email
+                window.location.href = 'book.pdf';
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Download My Book</h2>
+    <p>Enter your email address to download:</p>
+    <input type="email" id="email" placeholder="Enter your email">
+    <button onclick="validateEmail()">Download</button>
+</body>
+</html>
